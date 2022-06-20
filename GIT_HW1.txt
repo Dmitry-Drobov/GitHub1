@@ -1,0 +1,257 @@
+GIT Homework 1
+
+1. Создайте текстовый файл по Terminal.
+2. Сценарий перенесите в этот файл.
+3. Напротив каждого действия - напишите команду в GitBash
+
+JSON
+4. Создать внешний репозиторий c названием JSON.
+На гитхабе во вкладке Repositories создаем Новый (New)
+
+5. Клонировать репозиторий JSON на локальный компьютер.
+Code - Https...(либо SSH) - копируем ссылку.
+$ git clone https://github.com/Dmitry-Drobov/JSON.git
+(либо SSH: git@github.com:Dmitry-Drobov/JSON.git)
+
+6. Внутри локального JSON создать файл “new.json”.
+$ cd JSON
+$ touch new.json
+
+7. Добавить файл под гит.
+$ git add new.json
+
+8. Закоммитить файл.
+$ git commit -m "add json file"
+
+9. Отправить файл на внешний GitHub репозиторий.
+$ git push
+
+10. Отредактировать содержание файла “new.json” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате JSON.
+Через редактор vim - vim new.json
+{
+	"SNP": "ДДИ",
+	"Age": 39,
+	"Pets": 0,
+	"ExpectedSalary": 1000
+}
+
+11. Отправить изменения на внешний репозиторий.
+$ git commit -am "add inf json"
+$ git push
+
+12. Создать файл preferences.json
+$ cat > preferences.json
+
+13. В файл preferences.json добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате JSON.
+Через cat >
+{
+	"FavouriteFilm": "Зеленая миля",
+	"FavouriteSeries": "Шерлок",
+	"FavouriteFood": "мясо",
+	"FavouriteSeason": "лето",
+	"CountryForNextVisit": "Италия"
+}
+
+14. Создать файл skills.json добавить информацию о скиллах которые будут изучены на курсе в формате JSON
+$ cat > skills.json
+{
+	"skills": ["git", "postman", "charles", "android studio", "devtools"]
+}
+
+15. Отправить сразу 2 файла на внешний репозиторий.
+$ git add .
+$ git commit -m "add 2 files"
+$ git push
+
+16. На веб интерфейсе создать файл bug_report.json.
+Add file - Create new file
+
+17. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+Commit new file
+
+18. На веб интерфейсе модифицировать файл bug_report.json, добавить баг репорт в формате JSON.
+Войти в файл - нажать Edit this file
+{
+	"id": 1,
+	"summary": "Link of Privacy redirects to the Terms and Conditions Page when you click on it.",
+	"STR": "1. Click the Privacy link.",
+	"AR": "The warning that it will be The Terms and Conditions page (document) soon.",
+	"ER": "The page of Privacy opens.",
+	"Severity": "Minor",
+	"Priority": "Normal"
+}
+
+19. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+Commit changes.
+
+20. Синхронизировать внешний и локальный репозиторий JSON
+$ git pull
+-------------------------------------------------------------------------------------------------------
+XML
+21. Создать внешний репозиторий c названием XML.
+New - Create a new repository
+
+22. Клонировать репозиторий XML на локальный компьютер.
+Code - SSH - копировать
+$ git clone git@github.com:Dmitry-Drobov/XML.git
+
+23. Внутри локального XML создать файл “new.xml”.
+$ cd XML
+$ touch new.xml
+
+24. Добавить файл под гит.
+$ git add .
+
+25. Закоммитить файл.
+$ git commit -m "add xml file"
+
+26. Отправить файл на внешний GitHub репозиторий.
+$ git push
+
+27. Отредактировать содержание файла “new.xml” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате XML.
+$ vim new.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <SNP>ДДИ</SNP>
+  <Age>39</Age>
+  <Pets>0</Pets>
+  <ExpectedSalary>1000</ExpectedSalary>
+</root>
+
+28. Отправить изменения на внешний репозиторий.
+$ git commit -am "add inf xml"
+$ git push
+
+29. Создать файл preferences.xml
+$ cat > preferences.xml
+
+30. В файл preferences.xml добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, строна которую хотели бы посетить) в формате XML.
+Через cat >
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <FavouriteFilm>Зеленая миля</FavouriteFilm>
+  <FavouriteSeries>Шерлок</FavouriteSeries>
+  <FavouriteFood>мясо</FavouriteFood>
+  <FavouriteSeason>лето</FavouriteSeason>
+  <CountryForNextVisit>Италия</CountryForNextVisit>
+</root>
+
+31. Создать файл skills.xml добавить информацию о скиллах которые будут изучены на курсе в формате XML
+$ cat > skills.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <skills>git</skills>
+  <skills>postman</skills>
+  <skills>charles</skills>
+  <skills>android studio</skills>
+  <skills>devtools</skills>
+</root>
+
+32. Сделать коммит в одну строку.
+$ git add .
+$ git commit -m "add 2 files"
+(git add . && git commit -m "...")
+
+33. Отправить сразу 2 файла на внешний репозиторий.
+$ git push
+
+34. На веб интерфейсе создать файл bug_report.xml.
+Add file - Create new file
+
+35. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+Commit new file
+
+36. На веб интерфейсе модифицировать файл bug_report.xml, добавить баг репорт в формате XML.
+Edit this file
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <ID>1</ID>
+  <Summary>Link of Privacy redirects to the Terms and Conditions Page when you click on it.</Summary>
+  <STR>1. Click the Privacy link.</STR>
+  <AR>The warning that it will be The Terms and Conditions page (document) soon.</AR>
+  <ER>The page of Privacy opens.</ER>
+  <Severity>Minor</Severity>
+  <Priority>Normal</Priority>
+</root>
+
+37. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+Commit changes
+
+38. Синхронизировать внешний и локальный репозиторий XML
+$ git pull
+-----------------------------------------------------------------------------------------------------------
+TXT
+1. Создать внешний репозиторий c названием TXT.
+New - Create a new repository
+
+2. Клонировать репозиторий TXT на локальный компьютер.
+Clone - SSH... - копировать
+$ git clone git@github.com:Dmitry-Drobov/TXT.git
+
+3. Внутри локального TXT создать файл “new.txt”.
+$ cd TXT
+$ touch new.txt
+
+4. Добавить файл под гит.
+$ git add new.txt
+
+5. Закоммитить файл.
+$ git commit -m "add txt file"
+
+6. Отправить файл на внешний GitHub репозиторий.
+$ git push
+
+7. Отредактировать содержание файла “new.txt” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате TXT.
+$ vim new.txt
+SNP: ДДИ,
+Age: 39,
+Pets: 0,
+ExpectedSalary: 1000
+
+8. Отправить изменения на внешний репозиторий.
+$ git commit -am "add inf txt"
+$ git push
+
+9. Создать файл preferences.txt
+$ cat > preferences.txt
+
+10. В файл preferences.txt” добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате TXT.
+cat > preferences.txt
+FavouriteFilm: Зеленая миля,
+FavouriteSeries: Шерлок,
+FavouriteFood: мясо,
+FavouriteSeason: лето,
+CountryForNextVisit: Италия
+
+11. Создать файл skills.txt добавить информацию о скиллах которые будут изучены на курсе в формате TXT
+$ cat > skills.txt
+skills: git, postman, charles, android studio, devtools
+
+12. Сделать коммит в одну строку.
+$ git add .
+$ git commit -m "add 2 files"
+
+13. Отправить сразу 2 файла на внешний репозиторий.
+$ git push
+
+14. На веб интерфейсе создать файл bug_report.txt.
+Add file - Create a new file
+
+15. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+Commit new file
+
+16. На веб интерфейсе модифицировать файл bug_report.txt, добавить баг репорт в формате TXT.
+Edit this file
+ID: 1,
+Summary: Link of Privacy redirects to the Terms and Conditions Page when you click on it,
+STR: 1. Click the Privacy link,
+AR: The warning that it will be The Terms and Conditions page (document) soon,
+ER: The page of Privacy opens,
+Severity: Minor,
+Priority: Normal
+
+17. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+Commit changes
+
+18. Синхронизировать внешний и локальный репозиторий TXT
+git pull
